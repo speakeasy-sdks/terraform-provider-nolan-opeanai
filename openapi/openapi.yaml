@@ -1640,10 +1640,15 @@ components:
         model:
           description: &model_description |
             ID of the model to use. You can use the [List models](/docs/api-reference/models/list) API to see all of your available models, or see our [Model overview](/docs/models/overview) for descriptions of them.
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["text-davinci-003","text-davinci-002","text-davinci-001","code-davinci-002","text-curie-001","text-babbage-001","text-ada-001"]
+          type: string
+          enum:
+            - "text-davinci-003"
+            - "text-davinci-002"
+            - "text-davinci-001"
+            - "code-davinci-002"
+            - "text-curie-001"
+            - "text-babbage-001"
+            - "text-ada-001"
           x-oaiTypeLabel: string
         prompt:
           description: &completions_prompt_description |
@@ -1990,10 +1995,8 @@ components:
         model:
           description: ID of the model to use. See the [model endpoint compatibility](/docs/models/model-endpoint-compatibility) table for details on which models work with the Chat API.
           example: "gpt-3.5-turbo"
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["gpt-4","gpt-4-0314","gpt-4-0613","gpt-4-32k","gpt-4-32k-0314","gpt-4-32k-0613","gpt-3.5-turbo","gpt-3.5-turbo-16k","gpt-3.5-turbo-0301","gpt-3.5-turbo-0613","gpt-3.5-turbo-16k-0613"]
+          type: string
+          enum: ["gpt-4","gpt-4-0314","gpt-4-0613","gpt-4-32k","gpt-4-32k-0314","gpt-4-32k-0613","gpt-3.5-turbo","gpt-3.5-turbo-16k","gpt-3.5-turbo-0301","gpt-3.5-turbo-0613","gpt-3.5-turbo-16k-0613"]
           x-oaiTypeLabel: string
         messages:
           description: A list of messages comprising the conversation so far. [Example Python code](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_format_inputs_to_ChatGPT_models.ipynb).
@@ -2187,10 +2190,8 @@ components:
         model:
           description: ID of the model to use. You can use the `text-davinci-edit-001` or `code-davinci-edit-001` model with this endpoint.
           example: "text-davinci-edit-001"
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["text-davinci-edit-001","code-davinci-edit-001"]
+          type: string
+          enum: ["text-davinci-edit-001","code-davinci-edit-001"]
           x-oaiTypeLabel: string
         input:
           description:
@@ -2384,10 +2385,8 @@ components:
           nullable: false
           default: "text-moderation-latest"
           example: "text-moderation-stable"
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["text-moderation-latest","text-moderation-stable"]
+          type: string
+          enum: ["text-moderation-latest","text-moderation-stable"]
           x-oaiTypeLabel: string
       required:
         - input
@@ -2556,10 +2555,8 @@ components:
           default: "curie"
           example: "curie"
           nullable: true
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["ada","babbage","curie","davinci"]
+          type: string
+          enum: ["ada","babbage","curie","davinci"]
           x-oaiTypeLabel: string
         n_epochs:
           description: |
@@ -2699,10 +2696,8 @@ components:
         model:
           description: *model_description
           example: "text-embedding-ada-002"
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["text-embedding-ada-002"]
+          type: string
+          enum: ["text-embedding-ada-002"]
           x-oaiTypeLabel: string
         input:
           description: |
@@ -2789,10 +2784,8 @@ components:
           description: |
             ID of the model to use. Only `whisper-1` is currently available.
           example: whisper-1
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["whisper-1"]
+          type: string
+          enum: ["whisper-1"]
           x-oaiTypeLabel: string
         prompt:
           description: |
@@ -2845,10 +2838,8 @@ components:
           description: |
             ID of the model to use. Only `whisper-1` is currently available.
           example: whisper-1
-          anyOf:
-            - type: string
-            - type: string
-              enum: ["whisper-1"]
+          type: string
+          enum: ["whisper-1"]
           x-oaiTypeLabel: string
         prompt:
           description: |
