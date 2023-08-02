@@ -1,4 +1,9 @@
 configVersion: 1.0.0
+management:
+  docChecksum: ca6578e6cf826f600df5c0a63b783c64
+  docVersion: 2.0.0
+  speakeasyVersion: 1.67.0
+  generationVersion: 2.77.1
 generation:
   comments:
     disableComments: false
@@ -8,6 +13,6 @@ generation:
   singleTagPerOp: false
   tagNamespacingDisabled: false
 terraform:
-  version: 0.0.1
+  version: 1.0.0
   author: nolans-big-test
   packageName: openai
